@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+    <style>
+      @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+
+* {
+  box-sizing: border-box;
+}
+body {
+    height: 450vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+ /*HOMEPAGE*/ 
+.header {
+    width: 100%;
+    height: 1000px;
+    background-position: center;
+    background-size: cover;
+    background-image: url(/img/aq.jpg);
+    background-attachment: fixed;
+}
+
+.header-text {
+  text-align: center;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: whitesmoke;
+}
+
+.btn {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #555555;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/*ABOUT*/
+.row-abtme {
+  font-family: sans-serif, 'Poppins';
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  width: 80%;
+  max-width: 1170 px;
+  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-column-align: 50 px 30 px;
+}
+.row-abtme .left {
+  overflow: hidden;
+}
+.row-abtme .left img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.row-abtme .right {
+  display: flex;
+  align-items: center;
+}
+.row-abtme .right .content {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.row-abtme .right .content p{
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 15px;
+  color: whitesmoke;
+}
+
+@media (max-width: 991px){
+  .row-abtme .right .content {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .row-abtme {
+    width: 80%;
+    grid-template-columns: 1fr;
+  }
+}
+
+/*PORTFOLIO*/
+
+.nav-tab li a {
+  border-radius: 50px;
+  color: black !important;
+}
+.nav-tab li a:hover {
+  background-color: whitesmoke;
+  border-radius: 50px;}
+
+/*FOOTER*/
+.footer-basic {
+  padding:40px 0;
+  background-color:#ffffff;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+  <!--NAVBAR-->
+  <nav class="navbar navbar-expand-lg bg-dark sticky-top" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#Home"><img src="/img/logo.png" alt="logo"
+          style="width: 50px;height: 50px;">JzngKLD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#Home">Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contacts">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--//NAVBAR-->
+
+  <!--HOMEPAGE-->
+  <section id="Home">
+    <header>
+      <div class="header">
+        <div class="header-text">
+          <h1>I am Jayzy Lou Crisostomo</h1>
+          <p>A student in KLD</p>
+          <form action="#About"><button class="btn" href="#About">Get to know me</button></form>
+        </div>
+      </div>
+    </header>
+  </section>
+  <!--//HOMEPAGE-->
+
+  <!--ABOUT-->
+  <section id="About" class="d-flex flex-column bg-dark pb-5">
+    <div class="row-abtme mx-5">
+      <div class="left">
+        <img src="/img/Jz.jpg" class="img img-fluid pb-3" alt="ako toh tanga">
+      </div>
+      <div class="right">
+        <div class="content mt-5">
+          <h2 style="color: antiquewhite;">ABOUT ME</h2>
+          <p>I am Jayzy Lou Crisostomo, a student in KLD. I invite you to peruse my portfolio and embark on a visual
+            journey with me. Let my photographs speak, let them stir your emotions, and let them transport you to the
+            myriad of worlds I've had the privilege to capture. </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!--//ABOUT-->
+
+  <!--PORTFOLIO-->
+  <section id="Portfolio" class="py-5">
+    <!--PICTURES-->
+    <div class="container">
+      <h3 id="title" class="fw-bold pb-3 pt-5 text-center text-dark">
+        PORTFOLIO
+      </h3>
+    </div>
+    <div class="container pb-5">
+      <ul class="nav nav-tab justify-content-center" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-bs-toggle="tab" href="#beach">Beach</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#prome">Park</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#nature">Science</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#any">Others</a>
+        </li>
+      </ul>
+      <!--BEACH -->
+      <div class="tab-content">
+        <div id="beach" class="container tab-pane active">
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img src="/img/bangka.jpg" alt="bangka" class="card-img-top rounded img-fluid">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img src="/img/beach.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img src="/img/dagat.jpg" alt="dagat" class="card-img-top rounded img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--PARK-->
+      <div class="tab-content">
+        <div id="prome" class="container tab-pane fade">
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img img src="/img/hogwartsngetivac.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img src="/img/ilawngprome.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="img-area m-3">
+                <img src="/img/dahonsalangit.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--OTHER-->
+      <div class="tab-content">
+        <div id="any" class="container tab-pane fade">
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img img src="/img/bellflower.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img src="/img/school.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img src="/img/bgc.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Stuff-->
+      <div class="tab-content">
+        <div id="nature" class="container tab-pane fade">
+          <br>
+          <div class="row">
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img img src="/img/mic1.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img src="/img/mic2.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="img-area m-3">
+                  <img src="/img/mic3.jpg" alt="bangka" class="card-img-top rounded img-fluid" />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+    <!--//PICTURES-->
+    <!--Carousel-->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+      <!-- Indicators/dots -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- The slideshow/carousel -->
+      <div class="container">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/img/22.jpg" alt="SK00l" class="mx-auto d-block" height="500px" width="500px">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/daanansatagaytay.jpg" alt="Tgty" class="mx-auto d-block" height="500px" width="500px">
+          </div>
+          <div class="carousel-item">
+            <img src="/img/dagatulit.jpg" alt="Ocean" class="mx-auto d-block" height="500px" width="500px">
+          </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+    <!--//Carousel-->
+  </section>
+  <!--//PORTFOLIO-->
+
+  <!--FOOTER-->
+  <section id="Contacts" class="bg-secondary">
+    <div class="footer-basic">
+      <footer>
+        <div class="social"><a href="https://www.instagram.com/j4yc_c/" target="_blank"><i
+              class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a
+            href="https://www.facebook.com/jaylou6/" target="_blank"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#Home">Home</a></li>
+          <li class="list-inline-item"><a href="#About">About</a></li>
+          <li class="list-inline-item"><a href="#Portfolio">Portfolio</a></li>
+        </ul>
+        <p class="copyright">JzngKLD © 2023</p>
+      </footer>
+    </div>
+  </section>
+  <!--//FOOTER-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
